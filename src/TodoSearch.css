@@ -1,0 +1,13 @@
+.TodoSearch {
+  padding: 1rem;
+  display: block;
+  max-width: fit-content;
+  margin: auto;
+  max-width: 500px;
+  width: 100%;
+  border-radius: 60px;
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+  border: 2px solid var(--color-black);
+  outline: none;
+}

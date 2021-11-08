@@ -1,11 +1,8 @@
-const styles = {
-  color: "blue",
-  backgroundColor: "white",
-};
+import "./TodoCounter.css";
 
 function TodoCounter() {
   return (
-    <h3 style={styles}>You has completed 2 of 3 TODOS</h3>
+    <h3 className="TodoCounter">You has completed 2 of 3 TODOS</h3>
   );
 }
 

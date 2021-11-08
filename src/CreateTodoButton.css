@@ -1,0 +1,30 @@
+.CreateTodoButton {
+  position: fixed;
+  bottom: 1rem;
+  z-index: 2;
+  right: 1rem;
+  padding: 1rem;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 50%;
+  background-color: var(--color-good);
+  border: none;
+  width: 4rem;
+  height: 4rem;
+  cursor: pointer;
+  font-size: 2rem;
+  color:aliceblue;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.FooterImage {
+  max-width: 90%;
+  object-fit: cover;
+  position: fixed;
+  z-index: -1;
+  left: 50%;
+  bottom: 0px;
+  transform: translate(-50%);
+}

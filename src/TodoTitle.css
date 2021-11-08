@@ -1,0 +1,28 @@
+.TodoTitle {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: 6rem;
+  font-family: "Signika", sans-serif;
+}
+
+.TodoHeader {
+  max-width: 90%;
+  object-fit: cover;
+  position: fixed;
+  z-index: -1;
+  left: 50%;
+  top: -70px;
+  transform: translate(-50%);
+}
+
+@media screen and (max-width: 860px) {
+  .TodoHeader {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .TodoHeader {
+    max-width: 150%;
+  }
+}

@@ -1,6 +1,12 @@
+import FooterImage from "./assets/footerImage.svg";
+import "./CreateTodoButton.css";
+
 function CreateTodoButton(props) {
   return (
-    <button>{props.children}</button>
+    <div className="ContainerButton">
+      <button className="CreateTodoButton">{props.children}</button>
+      <img src={FooterImage} alt="footerImage" className="FooterImage" />
+    </div>
   );
 }
 

@@ -23,9 +23,9 @@ const todoList = [
 function App(props) {
   return (
     <>
-      <TodoTitle>TODOS</TodoTitle>
-      <TodoCounter />
+      <TodoTitle>TODO TITLE</TodoTitle>
       <TodoSearch />
+      <TodoCounter />
       <TodoList>
         {
           todoList.map(todo => (
@@ -33,7 +33,9 @@ function App(props) {
           ))
         }
       </TodoList>
-      <CreateTodoButton>+</CreateTodoButton>
+      <CreateTodoButton>
+        <i className="fas fa-plus"></i>
+      </CreateTodoButton>
     </>
   );
 }

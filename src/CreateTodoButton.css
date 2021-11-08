@@ -28,3 +28,7 @@
   bottom: 0px;
   transform: translate(-50%);
 }
+
+.CreateTodoButton:hover {
+  background-color: var(--color-secondary);
+}

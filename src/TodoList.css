@@ -1,9 +1,11 @@
 .TodoList {
+  padding: 0;
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 450px));
-  justify-items: stretch;
+  justify-items: center;
   align-content: flex-start;
   margin: auto;
+  justify-content: center;
   max-width: 1450px;
 }

@@ -4,13 +4,19 @@
   --color-black: #171515;
   --color-good: #4AC26E;
   --color-secondary: #31944E;
+  --color-bad: #BC6B6B;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
-  margin: 0;
+  margin: 1rem;
   font-family: "Nunito", sans-serif;
   background-color: var(--color-bg);
   color: var(--color-black);
+  padding-bottom: 5rem;
 }
 
 code {

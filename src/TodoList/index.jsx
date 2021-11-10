@@ -5,6 +5,7 @@ import "./TodoList.css";
 function TodoList (props) {
   useEffect(() => {
     let elem = document.querySelector(".TodoList");
+    // eslint-disable-next-line no-unused-vars
     let msnry = new Masonry(elem, {
       // options
       itemSelector: ".TodoItem",
@@ -12,7 +13,7 @@ function TodoList (props) {
       isFitWidth: true,
       gutter: 20,
     });
-  }, []);
+  }, [props.todosFiltered]);
 
   return (
     <ul className="TodoList">

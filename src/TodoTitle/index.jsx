@@ -1,4 +1,4 @@
-import HeaderImage from "./assets/headerImage.svg";
+import HeaderImage from "../assets/headerImage.svg";
 import "./TodoTitle.css";
 
 function TodoTitle (props) {

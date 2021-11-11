@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/dereksamuel.github.io/react-intro/static/css/main.01bd96d5.chunk.css",
+    "main.js": "/dereksamuel.github.io/react-intro/static/js/main.a7b7fb9e.chunk.js",
+    "main.js.map": "/dereksamuel.github.io/react-intro/static/js/main.a7b7fb9e.chunk.js.map",
+    "runtime-main.js": "/dereksamuel.github.io/react-intro/static/js/runtime-main.f2387bb2.js",
+    "runtime-main.js.map": "/dereksamuel.github.io/react-intro/static/js/runtime-main.f2387bb2.js.map",
+    "static/js/2.40f5a416.chunk.js": "/dereksamuel.github.io/react-intro/static/js/2.40f5a416.chunk.js",
+    "static/js/2.40f5a416.chunk.js.map": "/dereksamuel.github.io/react-intro/static/js/2.40f5a416.chunk.js.map",
+    "index.html": "/dereksamuel.github.io/react-intro/index.html",
+    "static/css/main.01bd96d5.chunk.css.map": "/dereksamuel.github.io/react-intro/static/css/main.01bd96d5.chunk.css.map",
+    "static/js/2.40f5a416.chunk.js.LICENSE.txt": "/dereksamuel.github.io/react-intro/static/js/2.40f5a416.chunk.js.LICENSE.txt",
+    "static/media/footerImage.1d0ec0bd.svg": "/dereksamuel.github.io/react-intro/static/media/footerImage.1d0ec0bd.svg",
+    "static/media/headerImage.06d0e3c1.svg": "/dereksamuel.github.io/react-intro/static/media/headerImage.06d0e3c1.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f2387bb2.js",
+    "static/js/2.40f5a416.chunk.js",
+    "static/css/main.01bd96d5.chunk.css",
+    "static/js/main.a7b7fb9e.chunk.js"
+  ]
+}

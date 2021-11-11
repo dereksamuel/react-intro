@@ -17,6 +17,7 @@
   align-items: center;
   align-self: flex-start;
   cursor: pointer;
+  transition: 0.5s all;
 }
 
 .TodoItem__check:hover {
@@ -32,7 +33,7 @@
   margin-left: 1rem;
 }
 
-.TodoItem__check p {
+.TodoItem__check p, .TodoItem__check--completed p {
   font-size: 1rem;
   margin: 0;
   margin-left: 1rem;

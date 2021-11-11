@@ -22,7 +22,7 @@ function TodoForm() {
 
   return (
     <form onSubmit={onSubmit} className="TodoForm">
-      <label htmlFor="newText">Escribe tu nuevo TODO</label>
+      <label htmlFor="newText">Write your new TODO</label>
       <textarea
         value={newTodoValue}
         onChange={handleChange}
@@ -33,7 +33,7 @@ function TodoForm() {
       <div>
         <button
           type="submit"
-        >Añadir</button>
+        >Add</button>
       </div>
     </form>
   );

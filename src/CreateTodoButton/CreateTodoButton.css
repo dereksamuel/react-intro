@@ -17,6 +17,8 @@
   display: flex;
   align-items: flex-start;
   justify-content: center;
+  z-index: 99;
+  transition: 0.5s all;
 }
 
 .FooterImage {
@@ -31,4 +33,30 @@
 
 .CreateTodoButton:hover {
   background-color: var(--color-secondary);
+}
+
+.closeAnim {
+  animation: rotate 1s forwards;
+}
+
+.closeAnimReverse {
+  animation: rotateReverse 1s forwards;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(45deg) translate(-20px, 16px);
+  }
+}
+
+@keyframes rotateReverse {
+  0% {
+    transform: rotate(45deg) translate(-20px, 16px);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }

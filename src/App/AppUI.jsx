@@ -1,25 +1,43 @@
+import { useContext } from "react";
+
 import { TodoCounter } from "../TodoCounter/index";
 import { TodoList } from "../TodoList/index";
 import { TodoItem } from "../TodoItem/index";
 import { TodoSearch } from "../TodoSearch/index";
+import { TodoLoading } from "../TodoLoading/index";
 import { TodoTitle } from "../TodoTitle/index";
 import { CreateTodoButton } from "../CreateTodoButton/index";
 
-function AppUI ({
-  search,
-  setSearch,
-  totalTodos,
-  todosFiltered,
-  completedTodos,
-  completeTodo,
-  deleteTodo
-}) {
+import { TodoContext } from "../TodoContext";
+import { Modal } from "../Modal";
+import { TodoForm } from "../TodoForm";
+
+function AppUI () {
+  const {
+    todosFiltered,
+    error,
+    loading,
+    completeTodo,
+    deleteTodo,
+    showModal,
+    setShowModal
+  } = useContext(TodoContext);
+
   return (
     <>
-      <TodoTitle>TODO TITLE</TodoTitle>
-      <TodoSearch search={search} setSearch={setSearch} />
-      <TodoCounter totalTodos={totalTodos} completedTodos={completedTodos} />
+      <TodoTitle>TODO NOTES</TodoTitle>
+      <TodoSearch />
+      <TodoCounter />
       <TodoList todosFiltered={todosFiltered}>
+        {
+          error && <p>You have one ERROR, NO tranqui...</p>
+        }
+        {
+          loading && <TodoLoading />
+        }
+        {
+          (!loading && !todosFiltered.length) && <p>Create your first TODO</p>
+        }
         {
           todosFiltered.map(todo => (
             <TodoItem
@@ -32,7 +50,14 @@ function AppUI ({
           ))
         }
       </TodoList>
-      <CreateTodoButton>
+      {
+        !!showModal && (
+          <Modal>
+            <TodoForm />
+          </Modal>
+        )
+      }
+      <CreateTodoButton setShowModal={setShowModal} showModal={showModal}>
         <i className="fas fa-plus"></i>
       </CreateTodoButton>
     </>

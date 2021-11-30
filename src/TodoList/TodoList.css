@@ -9,6 +9,10 @@
   max-width: 80%;
 }
 
+.TodoListContainer p {
+  text-align: center;
+}
+
 @media screen and (max-width: 508px) {
   .TodoList {
     max-width: 75%;

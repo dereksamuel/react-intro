@@ -1,11 +1,6 @@
-import { useContext } from "react";
-import { TodoContext } from "../TodoContext/index";
-
 import "./TodoSearch.css";
 
-function TodoSearch() {
-  const { search, setSearch } = useContext(TodoContext);
-
+function TodoSearch({ search, setSearch, loading }) {
   const onSearchValueChange = (event) => {
     setSearch(event.target.value);
   };
@@ -16,6 +11,7 @@ function TodoSearch() {
       placeholder="Another Text?"
       className="TodoSearch"
       onChange={onSearchValueChange}
+      disabled={loading}
     />
   );
 };

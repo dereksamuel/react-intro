@@ -17,5 +17,6 @@
 .TodoLoading {
   display: flex;
   flex-wrap: wrap;
-  width: 156%;
+  justify-content: center;
+  width: 100%;
 }

@@ -4,8 +4,6 @@ import "./index.css";
 import App from "./App/index";
 
 ReactDOM.render(
-  <App gettingDK="Buenas, buenas">
-    Hello Derek Children
-  </App>,
+  <App />,
   document.getElementById("root")
 );

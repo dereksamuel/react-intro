@@ -13,6 +13,7 @@ import { TodoTitle } from "../TodoTitle/index";
 
 // HOOKS
 import { useTodos } from "./useTodos";
+import { ChangeAlertWithStorageListener } from "../ChangeAlert";
 
 function App() {
   const {
@@ -77,6 +78,7 @@ function App() {
       <CreateTodoButton setShowModal={setShowModal} showModal={showModal}>
         <i className="fas fa-plus"></i>
       </CreateTodoButton>
+      <ChangeAlertWithStorageListener />
     </>
   );
 }

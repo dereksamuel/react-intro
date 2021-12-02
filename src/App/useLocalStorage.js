@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
 function useLocalStorage(itemName, defaultValue = []) {
+  const [sincronizedTabs, setSincronizedTabs] = useState(false);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
   const [item, setItem] = useState(defaultValue);
@@ -20,6 +21,7 @@ function useLocalStorage(itemName, defaultValue = []) {
 
         setItem(parserItem);
         setLoading(false);
+        setSincronizedTabs(true);
       } catch(errorLocal) {
         console.error(errorLocal);
         setError(errorLocal);
@@ -27,7 +29,12 @@ function useLocalStorage(itemName, defaultValue = []) {
       }
     }, 2000);
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [sincronizedTabs]);
+
+  const sincronizeTabs = () => {
+    setLoading(true);
+    setSincronizedTabs(false); // se dispara de nuevo el efecto
+  };
 
   const saveItem = (newItem) => {
     try {
@@ -44,7 +51,8 @@ function useLocalStorage(itemName, defaultValue = []) {
     item,
     saveItem,
     loading,
-    error
+    error,
+    sincronizeTabs,
   };
 }
 

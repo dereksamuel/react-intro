@@ -1,0 +1,48 @@
+.Alert {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgb(32 30 30 / 76%);
+  z-index: 110;
+  opacity: 0;
+  transition: 0.5s all;
+  animation: showOpacity 0.5s forwards ease-in-out;
+}
+
+.ChangeAlertContainer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 110;
+  background: whitesmoke;
+  padding: 2rem;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.ChangeAlert {
+  padding: 1rem;
+  border: 1px solid white;
+  background: #36748b;
+  border-radius: 5px;
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
+  color: whitesmoke;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.ChangeAlert i {
+  margin-right: 0.5rem;
+}
+
+.ChangeAlertContainer p {
+  margin: 0.5rem;
+}
+
+.ChangeAlertContainer p:nth-child(2) {
+  margin-bottom: 1rem;
+}

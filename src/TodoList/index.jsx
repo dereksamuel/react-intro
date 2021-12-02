@@ -15,7 +15,7 @@ function TodoList (props) {
       isFitWidth: true,
       gutter: 20,
     });
-  }, [props.todosFiltered]);
+  }, [props.todosFiltered, props.loading]);
 
   return (
     <section className="TodoListContainer">
@@ -26,7 +26,7 @@ function TodoList (props) {
       {(!!props.totalTodos && !props.todosFiltered.length) && props.onEmptySearchTodos(props.searchText)}
 
       <ul className="TodoList">
-        { props.todosFiltered.map(renderFunc) }
+        { !props.loading && props.todosFiltered.map(renderFunc) }
       </ul>
     </section>
   );

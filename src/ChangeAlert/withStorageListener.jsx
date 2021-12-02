@@ -5,17 +5,20 @@ function withStorageListener(ChangeAlert) {
     const [storageChange, setStorageChange] = useState(false);
 
     window.addEventListener("storage", (event) => {
-      console.log(event);
       if (event.key === "localStorageTodos_v1") {
-        console.log("Hubo changes");
         setStorageChange(true);
       }
     });
 
+    const toggleShow = () => {
+      setStorageChange(false);
+      props.sincronizeTabs();
+    };
+
     return (
       <ChangeAlert
         show={storageChange}
-        toggleShow={setStorageChange}
+        toggleShow={toggleShow}
       />
     );
   }

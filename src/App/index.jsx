@@ -29,6 +29,7 @@ function App() {
     search,
     setSearch,
     saveTodo,
+    sincronizeTodos,
   } = useTodos();
 
   return (
@@ -75,10 +76,12 @@ function App() {
           </Modal>
         )
       }
-      <CreateTodoButton setShowModal={setShowModal} showModal={showModal}>
+      <CreateTodoButton setShowModal={setShowModal} showModal={showModal} loading={loading}>
         <i className="fas fa-plus"></i>
       </CreateTodoButton>
-      <ChangeAlertWithStorageListener />
+      <ChangeAlertWithStorageListener
+        sincronizeTabs={sincronizeTodos}
+      />
     </>
   );
 }

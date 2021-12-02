@@ -9,6 +9,7 @@ function CreateTodoButton(props) {
   return (
     <div className="ContainerButton">
       <button
+        disabled={props.loading}
         className={props.showModal ? "CreateTodoButton closeAnim" : "CreateTodoButton closeAnimReverse"}
         onClick={onClickButton}>{props.children}</button>
       <img src={FooterImage} alt="footerImage" className="FooterImage" />
